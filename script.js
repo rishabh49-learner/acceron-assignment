@@ -15,7 +15,7 @@ const closeModal = document.querySelector('.close-modal');
 
 // Function to open modal
 function openModal() {
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     modal.style.display = 'flex'; // Make sure modal is visible
 
     requestAnimationFrame(() => {
@@ -34,7 +34,7 @@ function closeModalFunc() {
 
     setTimeout(() => {
         modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        // document.body.style.overflow = 'auto';
     }, 300); // Wait for animation to finish
 }
 
