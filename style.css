@@ -20,13 +20,25 @@ body {
     line-height: 1.6;
     color: var(--text-color);
 }
+.icon-1 {
+    color: #2d4fe1;
+    font-size: 3em;  
+    margin-bottom: 1rem;
+}
+.section-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px
+}
+
+/* 
 
 /* Navigation */
 .navbar {
     padding: 1rem 0;
     background: var(--white);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    position: fixed;
+    
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -64,31 +76,52 @@ body {
 .nav-link:hover {
     color: var(--primary-color);
 }
+.call-container{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
+
+}
 /* Call Now Button */
 .call-now-btn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 5px 0px;
+    padding-right: 16px 0px;
     background: #274be31a;
-    color: var(--primary-color);
+    color: black;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 14px;
     transition: all 0.3s ease;
     margin: 0px 15px 0px 0px;
-}
+    width: 130px;
+    height: 40px;
+    
 
-.call-now-btn img {
-    width: 20px;
-    height: 20px;
+    
+
+}
+/* Removed empty ruleset for call-now-btn i */
+.call-now-btn i {
+    font-size: 18px;
+    color: #2d4fe1;
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+   
 }
 
 .call-now-btn:hover {
     /* background: var(--primary-color); */
     color: rgb(252, 191, 9);
 }
+  
 
 /* Let's Talk Button */
 .lets-talk-btn {
@@ -173,6 +206,7 @@ body {
 
 /* Hero Section */
 .hero {
+    background-image: url('assets/bg-6.png'); background-size: cover; background-position: center; height: 500px; color: white; text-align: center; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,6 +217,16 @@ body {
     margin-top: 100px;
 }
 
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.hero-text {
+    width: 55%;
+}
 
 
 .main-title {
@@ -263,14 +307,14 @@ body {
     background: #f0f8ff;
 }
 
-.section-label {
+.section-header p {
     color: #6B7280;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
-.section-title {
+.section-header h2{
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 40px;
@@ -299,65 +343,79 @@ body {
     flex-direction: column;
     gap: 24px;
     position: relative;
+
 }
 
 /* Vertical dotted line */
-.services-list::before {
-    content: '';
-    position: absolute;
-    left: 20px;  /* Aligns with the center of icons */
-    top: 60px;   /* Starts below first icon */
-    bottom: 60px; /* Ends above last icon */
-    width: 1px;
-    border-left: 2px dotted #E5E7EB;
-}
+
 
 .service-item {
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    padding: 24px;
+    padding: 20px;
     background: white;
     border-radius: 12px;
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
     border: 1px solid transparent;
+    border-color:rgb(100, 172, 234);
+    z-index: 2;
+
 }
 
 /* Horizontal dotted line */
-.service-item:not(:last-child)::after {
+.service-item:not(:last-child) .service-icon::after {
     content: '';
     position: absolute;
-    left: 20px;
-    bottom: -24px;
-    width: 1px;
-    height: 24px;
-    border-left: 2px dotted #E5E7EB;
+    width: 2px;
+    height: 100px;
+   
+    top: 70px;
+    transform: translateX(-50%);
+    z-index: -1;
+    border-left: 2px dotted #d9d9d9;
+    transition: none;
+
 }
 
 /* Update hover effect */
 .service-item:hover {
-    box-shadow: 0 4px 6px rgba(3, 29, 126, 0.1);
+    box-shadow: 0 10px 40px 0 rgba(52,104,240,.2);
+    
     transform: none;
+    
     background: white;
-    border: 1px solid #3772e8;
+    border-color: #2d4fe1
+    
+}
+.service-item:hover .service-icon {
+    
+    transform: none;
+    background:#212529;
+    color:white;
+    transform: scale(1.2);
+
+  
 }
 
-.service-icon {
-    width: 48px;
-    height: 48px;
+
+.service-item .service-icon {
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f8f9fa;
     border-radius: 50%;
     transition: all 0.3s ease;
+    font-size: 30px;
 }
 
 .service-icon img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .service-content h3 {
@@ -664,7 +722,7 @@ body {
 }
 /* Banner Styles */
 .banner-container {
-    position: absolute;
+    position: flex;
     top: 0;
     right: 0;
     width: 100%;
@@ -678,18 +736,19 @@ body {
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 120px;  /* Adjust width as needed */
+    width: 280px;  /* Adjust width as needed */
     height: 100%;
     overflow: hidden;
     animation: 10s fadeIn
+    
 }
 
 .banner-left {
-    right: 250px;  /* Adjust position as needed */
+    right:200 px;  /* Adjust position as needed */
 }
 
 .banner-right {
-    right: 100px;  /* Adjust position as needed */
+    right: 50px;  /* Adjust position as needed */
 }
 
 .banner-content {
@@ -718,13 +777,17 @@ body {
 
 /* Add this to your media query for mobile responsiveness */
 @media (max-width: 768px) {
-    .banner {
-        .image-column-top-to-bottom img {
-            animation: 15s ease-in-out infinite moveleftToright;
-            padding: 20px;
-        }
+    
+    .image-column-top-to-bottom img {
+        animation: 15s ease-in-out infinite moveleftToright
     }
+    
+    .image-column-bottom-to-top img {
+        animation: 15s ease-in-out infinite moveleftToright
+    
 }
+}
+
 
 /* Why Choose Us Section */
 .why-choose-us {
@@ -758,21 +821,9 @@ body {
     gap: 16px;
 }
 
-.feature-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #4F46E5;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.feature-icon img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);  /* Makes icon white */
+.feature-item i  {
+    color: #4F46E5;
+    font-size: 50px;
 }
 
 .feature-content h3 {
@@ -961,11 +1012,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px;
-    background: #f8fafc;
-    border-radius: 12px;
+    padding: 16px;
+    background: #f0f8ff;
+    border-radius: 30px;
     border: 1px solid transparent;
+    border-color:rgb(100, 172, 234);
     transition: all 0.3s ease;
+    
 }
 
 .industry-item:hover {
@@ -977,12 +1030,17 @@ body {
 .industry-icon {
     width: 64px;
     height: 64px;
+    font: 50px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin:auto auto 30px auto;
+    position: relative;
+}
+.industry-icon i {
+    font-size: 30px;
 }
 
 .industry-icon img {
@@ -991,11 +1049,11 @@ body {
 }
 
 .industry-item h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     color: #111827;
     text-align: center;
-    margin: 0;
+    margin: 0px 0px 15px;
 }
 
 .industry-cta {
@@ -1011,6 +1069,26 @@ body {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 24px;
+}
+
+/* Update hover effect */
+.industry-item:hover {
+    box-shadow: 0 10px 40px 0 rgba(52,104,240,.2);
+    
+    transform: none;
+    
+    background: white;
+    border-color: #2d4fe1
+    
+}
+.industry-item:hover .industry-icon {
+    
+    transform: none;
+    background:#2d4fe1;
+    color:white;
+    
+
+  
 }
 
 /* Reusing book-call-btn styles but with white background */
@@ -1088,32 +1166,48 @@ body {
 }
 
 /* Consultation Modal */
+/* Consultation Modal */
 .consultation-modal {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
     z-index: 2000;
-    justify-content: center;
+    justify-content: flex-end; /* Align modal to the right */
     align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .consultation-modal.active {
     display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 
+/* Modal Content Sliding Effect */
 .modal-content {
     background: white;
     padding: 32px;
-    border-radius: 12px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     position: relative;
+    transform: translateX(100%); /* Start fully off-screen */
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
+.modal-content.slide-in {
+    transform: translateX(0); /* Slide into view */
+    opacity: 1;
+}
+/* Modal Header */
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -1136,6 +1230,7 @@ body {
     padding: 4px;
 }
 
+/* Form Styling */
 .consultation-form .form-group {
     margin-bottom: 16px;
 }
@@ -1148,6 +1243,7 @@ body {
     font-size: 16px;
     color: #111827;
     background: #F9FAFB;
+    transition: border-color 0.3s ease;
 }
 
 .consultation-form input:focus {
@@ -1156,19 +1252,20 @@ body {
     background: white;
 }
 
+/* Submit Button */
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background: #212529;
+    background: #4F46E5;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .submit-btn:hover {
-    opacity: 0.9;
-} 
+    background: #3730A3;
+}

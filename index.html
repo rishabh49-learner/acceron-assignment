@@ -7,7 +7,8 @@
     <!-- Minimal Bootstrap for Grid System -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -62,7 +63,7 @@
                     <a href="#" class="nav-link">Industries</a>
                     <a href="#" class="nav-link">Testimonials</a>
                     <a href="#" class="call-now-btn">
-                        <img src="path/to/phone-icon.svg" alt="Phone">
+                        <i class="fa-solid fa-phone me-2" ></i>
                         <span>Call Now</span>
                     </a>
                     <a href="#" class="lets-talk-btn">Let's Talk</a>
@@ -73,7 +74,7 @@
    
 
     <!-- Hero Section -->
-    <section  style="background-image: url('assets/bg-6.png'); background-size: cover; background-position: center; height: 500px; color: white;"class="hero ">
+    <section  class="hero ">
         <div class="container">
             <div class="row ">
                 <div class="col-md-7">
@@ -99,11 +100,18 @@
                                 <img src="assets/banner1.jpg" alt="Banner 1">
                                 <img src="assets/banner2.jpg" alt="Banner 2">
                                 <img src="assets/banner3.jpg" alt="Banner 3">
+                                <img src="assets/banner1.jpg" alt="Banner 1">
+                                <img src="assets/banner2.jpg" alt="Banner 2">
+                                
                             </div>
                             <div class="banner banner-right image-column-bottom-to-top">
                                 <img src="assets/banner1.jpg" alt="Banner 1">
                                 <img src="assets/banner2.jpg" alt="Banner 2">
                                 <img src="assets/banner3.jpg" alt="Banner 3">
+                                <img src="assets/banner1.jpg" alt="Banner 1">
+                                <img src="assets/banner2.jpg" alt="Banner 2">
+                              
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -146,18 +154,21 @@
  <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <p class="section-label">OUR SERVICES</p>
-            <h2 class="section-title">Comprehensive Solutions <span class="highlight">For Your Digital Needs</span></h2>
+            <div class="section-title">
+                <p>OUR SERVICES</p>
+                <h2 >Comprehensive Solutions <span class="highlight">For Your Digital Needs</span></h2>
+            </div>
             
             <div class="services-layout">
                 <div class="services-image">
-                    <img src="assets/service-section.jpg" alt="Services Overview">
+                    <img src="assets/service-section.jpg" alt="Website Design">
                 </div>
                 
                 <div class="services-list">
                     <div class="service-item">
                         <div class="service-icon">
-                            <img src="path/to/website-icon.svg" alt="Website Design">
+                            <i class="fa-solid fa-laptop-code"></i>
+
                         </div>
                         <div class="service-content">
                             <h3>Website Design</h3>
@@ -167,7 +178,8 @@
 
                     <div class="service-item">
                         <div class="service-icon">
-                            <img src="path/to/mobile-icon.svg" alt="Mobile App">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
                         </div>
                         <div class="service-content">
                             <h3>Mobile App Development</h3>
@@ -177,7 +189,8 @@
 
                     <div class="service-item">
                         <div class="service-icon">
-                            <img src="path/to/software-icon.svg" alt="Custom Software">
+                            <i class="fa-solid fa-gears"></i>
+
                         </div>
                         <div class="service-content">
                             <h3>Custom Software Development</h3>
@@ -187,7 +200,8 @@
 
                     <div class="service-item">
                         <div class="service-icon">
-                            <img src="path/to/ecommerce-icon.svg" alt="Ecommerce">
+                            <i class="fa-solid fa-cart-shopping"></i>
+
                         </div>
                         <div class="service-content">
                             <h3>Ecommerce Solutions</h3>
@@ -197,7 +211,7 @@
 
                     <div class="service-item">
                         <div class="service-icon">
-                            <img src="path/to/maintenance-icon.svg" alt="Maintenance">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
                         </div>
                         <div class="service-content">
                             <h3>Maintenance & AMC</h3>
@@ -227,9 +241,7 @@
                     </p>
                     <div class="features-grid">
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <img src="assets/team-icon.svg" alt="Team Icon">
-                            </div>
+                            <i class="fas fa-users " ></i>
                             <div class="feature-content">
                                 <h3>Skilled & Experienced Team</h3>
                                 <p>Decades of combined experience in delivering complex projects across industries.</p>
@@ -237,9 +249,7 @@
                         </div>
 
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <img src="assets/quality-icon.svg" alt="Quality Icon">
-                            </div>
+                            <i class="fas fa-check-circle "></i>
                             <div class="feature-content">
                                 <h3>Quality Assurance</h3>
                                 <p>Rigorous testing protocols guarantee high-quality deliverables, ensuring a bug-free, smooth user experience.</p>
@@ -247,9 +257,7 @@
                         </div>
 
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <img src="assets/process-icon.svg" alt="Process Icon">
-                            </div>
+                            <i class="fas fa-user-check "></i>
                             <div class="feature-content">
                                 <h3>Client-Centric Process</h3>
                                 <p>You're always in the loop, from start to finish.</p>
@@ -257,9 +265,7 @@
                         </div>
 
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <img src="assets/time-icon.svg" alt="Time Icon">
-                            </div>
+                            <i class="fas fa-clock "></i>
                             <div class="feature-content">
                                 <h3>On-Time Delivery</h3>
                                 <p>We take deadlines seriously. Always delivered on time.</p>
@@ -323,63 +329,58 @@
     <!-- Industry Expertise Section -->
     <section class="industry-expertise">
         <div class="container">
-            <p class="section-label">INDUSTRY EXPERTISE</p>
-            <h2 class="section-title">Industries <span class="highlight">We Work With</span></h2>
+            <div class="section-header text-center">
+                <p >INDUSTRY EXPERTISE</p>
+                <h2 > <span class="highlight">Industries</span> We Work With </h2>
+            </div>
             
             <div class="industry-grid">
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/education-icon.svg" alt="Education">
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <h3>Education & eLearning</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/fintech-icon.svg" alt="Fintech">
-                    </div>
+                        <i class="fa-solid fa-building-columns"></i>                      </div>
                     <h3>Fintech Development</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/realestate-icon.svg" alt="Real Estate">
-                    </div>
+                        <i class="fa-solid fa-building"></i>                    </div>
                     <h3>Real Estate Industry</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/healthcare-icon.svg" alt="Healthcare">
-                    </div>
+                        <i class="fa-solid fa-heart-pulse"></i>                    </div>
                     <h3>Healthcare Industry</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/ecommerce-icon.svg" alt="E-commerce">
-                    </div>
+                        <i class="fa-solid fa-cart-shopping"></i>                    </div>
                     <h3>e-Commerce & Retail</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/saas-icon.svg" alt="SaaS">
-                    </div>
+                        <i class="fa-solid fa-cloud"></i>                    </div>
                     <h3>SaaS Solutions</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/travel-icon.svg" alt="Travel">
-                    </div>
+                        <i class="fa-solid fa-plane"></i>                    </div>
                     <h3>Travel & Hospitality</h3>
                 </div>
 
                 <div class="industry-item">
                     <div class="industry-icon">
-                        <img src="assets/logistics-icon.svg" alt="Logistics">
-                    </div>
+                        <i class="fa-solid fa-truck"></i>                    </div>
                     <h3>Logistics & Automobile</h3>
                 </div>
             </div>
@@ -394,6 +395,6 @@
     <!-- More sections to follow... -->
 
     <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html> 
